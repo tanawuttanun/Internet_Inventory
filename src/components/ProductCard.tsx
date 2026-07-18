@@ -41,7 +41,8 @@ export default function ProductCard({
       </TouchableOpacity>
 
       <View style={styles.imageContainer}>
-        <Image source={{ uri: product.image }} style={styles.image} />
+        {/* 💡 แก้ไขตรงนี้: ลบ { uri: ... } ออก เพื่อให้รองรับไฟล์ require() จากในเครื่อง */}
+        <Image source={product.image} style={styles.image} />
       </View>
 
       <View style={styles.info}>
